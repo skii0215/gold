@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <h1>Student Card</h1>
+
+      <div id="container">
+        <div>
+          <h2>Name</h2>
+          <input id="input1" type="text" />
+        </div>
+        <div>
+          <h2>Email</h2>
+          <input id="input2" type="text" />
+        </div>
+        <div>
+          <h2>Age</h2>
+          <input id="input3" type="text" />
+        </div>
+        <div>
+          <h2>Class</h2>
+          <input id="input4" type="text" />
+        </div>
+        <button onclick="changeTitle()" class="button is danger">
+          Continue
+        </button>
+      </div>
+      <p id="title1">Name:</p>
+      <p id="title2">Email:</p>
+      <p id="title3">Age:</p>
+      <p id="title4">Class:</p>
+    </section>
+    <script>
+      const title1 = document.getElementById("title1");
+      const input1 = document.getElementById("input1");
+      const title2 = document.getElementById("title2");
+      const input2 = document.getElementById("input2");
+
+      const title3 = document.getElementById("title3");
+      const input3 = document.getElementById("input3");
+      const title4 = document.getElementById("title4");
+      const input4 = document.getElementById("input4");
+      const sectoin = document.querySelector("container");
+
+      const changeTitle = () => {
+        title1.textContent = "Name:" + input1.value;
+        input1.value = "";
+        title2.textContent = "Email:" + input2.value;
+        input2.value = "";
+        title3.textContent = "Age:" + input3.value;
+        input3.value = "";
+        title4.textContent = "Class:" + input4.value;
+        input4.value = "";
+        container.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

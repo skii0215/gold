@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <h1 id="title" class="title">Hello java</h1>
+    <input id="input" type="" placeholder="Garchig bich" />
+    <button onclick="changeTitle()" class="button is-danger">Click</button>
+
+    <script>
+      const title = document.getElementById("title");
+      const input = document.getElementById("input");
+      const changeTitle = () => {
+        title.textContent = input.value;
+        input.value = "";
+      };
+    </script>
+  </body>
+</html>
